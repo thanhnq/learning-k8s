@@ -1,0 +1,9 @@
+selector:
+  matchLabels:
+    app: alpaca
+  matchExpressions:
+    - {key: ver, operator: In, values: [1, 2]}
+
+metadata:
+  annotations:
+    example.com/icon-url: "https://example.com/icon.png"

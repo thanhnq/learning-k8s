@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: 
+  labels:
+    name: 
+spec:
+  schedulerName: 
+  containers:
+  - name: 
+    image: 

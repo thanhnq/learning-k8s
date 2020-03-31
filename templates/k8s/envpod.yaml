@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: envpod
+spec:
+  containers:
+    - name: envpod
+      image: busybox
+      command: ['sleep'] 
+      args: ['10000']
+      env: 
+        - name: FIRSTNAME
+          valueFrom: 
+            configMapKeyRef:
+              name: multimap
+              key: given
+        - name: LASTNAME
+          valueFrom:
+            configMapKeyRef:
+              name: multimap
+              key: family
